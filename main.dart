@@ -21,6 +21,7 @@ main() {
         cliente.email = stdin.readLineSync();
         print("Digite o sexo do cliente: ");
         cliente.sexo = stdin.readLineSync();
+
         print(cliente.nome);
         break;
       case 2:
@@ -28,4 +29,11 @@ main() {
       default:
     }
   } while (opcao != 0);
+
+  // Operador CASCADE
+  // cliente
+  //   ..nome = "João"
+  //   ..idade = 20
+  //   ..sexo = "masculino"
+  //   ..email = "joao@mail.com";
 }
