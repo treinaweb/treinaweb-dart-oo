@@ -1,27 +1,27 @@
 class Pessoa {
-  String nome;
-  int idade;
-  String sexo;
-  String email;
+  String _nome;
+  int _idade;
+  String _sexo;
+  String _email;
 
   Pessoa(String nome, int idade, String sexo, String email) {
-    this.nome = nome;
-    this.idade = idade;
-    this.sexo = sexo;
-    this.email = email;
+    this._nome = nome;
+    this._idade = idade;
+    this._sexo = sexo;
+    this._email = email;
   }
 
   Pessoa.construtorMasculino(String nome, int idade, String email) {
-    this.nome = nome;
-    this.idade = idade;
-    this.email = email;
-    this.sexo = "Masculino";
+    this._nome = nome;
+    this._idade = idade;
+    this._email = email;
+    this._sexo = "Masculino";
   }
 
   Pessoa.construtorFeminino(String nome, int idade, String email) {
-    this.nome = nome;
-    this.idade = idade;
-    this.email = email;
-    this.sexo = "Feminino";
+    this._nome = nome;
+    this._idade = idade;
+    this._email = email;
+    this._sexo = "Feminino";
   }
 }
