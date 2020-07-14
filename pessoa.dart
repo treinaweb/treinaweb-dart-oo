@@ -24,4 +24,20 @@ class Pessoa {
     this._email = email;
     this._sexo = "Feminino";
   }
+
+  String get nome {
+    return this._nome;
+  }
+
+  int get idade {
+    return this._idade;
+  }
+
+  String get email {
+    return this._email;
+  }
+
+  String get sexo {
+    return this._sexo;
+  }
 }
