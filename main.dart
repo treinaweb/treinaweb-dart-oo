@@ -7,7 +7,9 @@ main() {
   do {
     print("MENU: ");
     print("1 - Cadastrar Cliente");
-    print("2 - Listar Clientes");
+    print("2 - Cadastrar Cliente Masculino");
+    print("3 - Cadastrar Cliente Feminino");
+    print("4 - Listar Clientes");
     print("0 - Sair");
     opcao = int.parse(stdin.readLineSync());
     switch (opcao) {
@@ -25,6 +27,24 @@ main() {
         print(cliente.nome);
         break;
       case 2:
+        print("Digite o nome do cliente: ");
+        var nome = stdin.readLineSync();
+        print("Digite a idade do cliente: ");
+        var idade = int.parse(stdin.readLineSync());
+        print("Digite o email do cliente: ");
+        var email = stdin.readLineSync();
+        var cliente = new Pessoa.construtorMasculino(nome, idade, email);
+        print(cliente.sexo);
+        break;
+      case 3:
+        print("Digite o nome do cliente: ");
+        var nome = stdin.readLineSync();
+        print("Digite a idade do cliente: ");
+        var idade = int.parse(stdin.readLineSync());
+        print("Digite o email do cliente: ");
+        var email = stdin.readLineSync();
+        var cliente = new Pessoa.construtorFeminino(nome, idade, email);
+        print(cliente.sexo);
         break;
       default:
     }
