@@ -25,6 +25,8 @@ main() {
         var cliente = new Pessoa(nome, idade, email, sexo);
 
         print(cliente.nome);
+        cliente.nome = "Pedro";
+        print(cliente.nome);
         break;
       case 2:
         print("Digite o nome do cliente: ");

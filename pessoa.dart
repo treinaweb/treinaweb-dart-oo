@@ -40,4 +40,20 @@ class Pessoa {
   String get sexo {
     return this._sexo;
   }
+
+  void set nome(String nome) {
+    this._nome = nome;
+  }
+
+  void set idade(int nome) {
+    this._idade = idade;
+  }
+
+  void set email(String email) {
+    this._email = email;
+  }
+
+  void set sexo(String sexo) {
+    this._sexo = sexo;
+  }
 }
