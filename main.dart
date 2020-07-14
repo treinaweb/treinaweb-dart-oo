@@ -12,15 +12,15 @@ main() {
     opcao = int.parse(stdin.readLineSync());
     switch (opcao) {
       case 1:
-        var cliente = new Pessoa();
         print("Digite o nome do cliente: ");
-        cliente.nome = stdin.readLineSync();
+        var nome = stdin.readLineSync();
         print("Digite a idade do cliente: ");
-        cliente.idade = int.parse(stdin.readLineSync());
+        var idade = int.parse(stdin.readLineSync());
         print("Digite o email do cliente: ");
-        cliente.email = stdin.readLineSync();
+        var email = stdin.readLineSync();
         print("Digite o sexo do cliente: ");
-        cliente.sexo = stdin.readLineSync();
+        var sexo = stdin.readLineSync();
+        var cliente = new Pessoa(nome, idade, email, sexo);
 
         print(cliente.nome);
         break;
