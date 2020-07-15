@@ -65,4 +65,9 @@ class Pessoa {
   void adicionarSobrenome(String sobrenome) {
     this._nome = this._nome + " " + sobrenome;
   }
+
+  void adicionarSobrenomeLambda(String sobrenome) =>
+      this._nome = this._nome + " " + sobrenome;
+
+  int fazerAniversarioLambda() => this._idade + 1;
 }

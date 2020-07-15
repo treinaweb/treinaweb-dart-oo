@@ -27,9 +27,9 @@ main() {
         print(cliente.nome);
         print("Digite o sobrenome do cliente: ");
         var sobrenome = stdin.readLineSync();
-        cliente.adicionarSobrenome(sobrenome);
+        cliente.adicionarSobrenomeLambda(sobrenome);
         print(cliente.nome);
-        print(cliente.fazerAniversario());
+        print(cliente.fazerAniversarioLambda());
         break;
       case 2:
         print("Digite o nome do cliente: ");
