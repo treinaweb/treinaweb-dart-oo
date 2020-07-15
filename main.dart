@@ -25,8 +25,11 @@ main() {
         var cliente = new Pessoa(nome, idade, email, sexo);
 
         print(cliente.nome);
-        cliente.nome = "Pedro";
+        print("Digite o sobrenome do cliente: ");
+        var sobrenome = stdin.readLineSync();
+        cliente.adicionarSobrenome(sobrenome);
         print(cliente.nome);
+        print(cliente.fazerAniversario());
         break;
       case 2:
         print("Digite o nome do cliente: ");

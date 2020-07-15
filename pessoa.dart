@@ -56,4 +56,13 @@ class Pessoa {
   void set sexo(String sexo) {
     this._sexo = sexo;
   }
+
+  int fazerAniversario() {
+    this._idade++;
+    return this._idade;
+  }
+
+  void adicionarSobrenome(String sobrenome) {
+    this._nome = this._nome + " " + sobrenome;
+  }
 }
