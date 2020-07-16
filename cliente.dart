@@ -14,4 +14,11 @@ class Cliente extends Pessoa {
   Cliente.feminino(String nome, int idade, String email, bool ativo)
       : this._ativo = ativo,
         super.construtorFeminino(nome, idade, email);
+
+  @override
+  String toString() {
+    // return super.toString() + " e status ${this._ativo}";
+    return "O cliente de nome ${this.nome} possui ${this.idade} " +
+        "anos com sexo ${this.sexo} email ${this.email} e status ${this._ativo}";
+  }
 }

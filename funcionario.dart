@@ -14,4 +14,10 @@ class Funcionario extends Pessoa {
   Funcionario.feminino(String nome, int idade, String email, String cargo)
       : this._cargo = cargo,
         super.construtorFeminino(nome, idade, email);
+
+  @override
+  String toString() {
+    return "O funcionário de nome ${this.nome} possui ${this.idade} " +
+        "anos com sexo ${this.sexo} email ${this.email} e cargo ${this._cargo}";
+  }
 }
