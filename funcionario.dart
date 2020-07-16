@@ -20,4 +20,10 @@ class Funcionario extends Pessoa {
     return "O funcionário de nome ${this.nome} possui ${this.idade} " +
         "anos com sexo ${this.sexo} email ${this.email} e cargo ${this._cargo}";
   }
+
+  @override
+  void desativar() {
+    this._cargo = "demitido";
+    print("O funcionário foi desativado");
+  }
 }

@@ -21,4 +21,10 @@ class Cliente extends Pessoa {
     return "O cliente de nome ${this.nome} possui ${this.idade} " +
         "anos com sexo ${this.sexo} email ${this.email} e status ${this._ativo}";
   }
+
+  @override
+  void desativar() {
+    this._ativo = false;
+    print("Cliente desativado");
+  }
 }

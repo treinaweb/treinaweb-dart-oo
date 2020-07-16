@@ -32,6 +32,7 @@ main() {
         var sexo = stdin.readLineSync();
         var cliente = new Cliente(nome, idade, email, sexo, true);
         listaClientes.add(cliente);
+        cliente.desativar();
 
         break;
       case 2:
@@ -75,6 +76,7 @@ main() {
         var cargo = stdin.readLineSync();
         var funcionario = new Funcionario(nome, idade, email, sexo, cargo);
         listaFuncionarios.add(funcionario);
+        funcionario.desativar();
         break;
       case 6:
         print("Digite o nome do funcionario: ");

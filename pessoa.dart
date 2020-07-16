@@ -25,6 +25,8 @@ abstract class Pessoa {
     this._sexo = "Feminino";
   }
 
+  void desativar();
+
   String toString() {
     return "A pessoa de nome ${this._nome} possui ${this._idade} " +
         "anos com sexo ${this._sexo} e email ${this._email}";
