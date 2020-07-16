@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'cliente.dart';
 import 'pessoa.dart';
 
 main() {
@@ -22,7 +23,7 @@ main() {
         var email = stdin.readLineSync();
         print("Digite o sexo do cliente: ");
         var sexo = stdin.readLineSync();
-        var cliente = new Pessoa(nome, idade, email, sexo);
+        var cliente = new Cliente(nome, idade, email, sexo, true);
 
         print(cliente.nome);
         print("Digite o sobrenome do cliente: ");
@@ -38,7 +39,7 @@ main() {
         var idade = int.parse(stdin.readLineSync());
         print("Digite o email do cliente: ");
         var email = stdin.readLineSync();
-        var cliente = new Pessoa.construtorMasculino(nome, idade, email);
+        var cliente = new Cliente.masculino(nome, idade, email, true);
         print(cliente.sexo);
         break;
       case 3:
@@ -48,7 +49,7 @@ main() {
         var idade = int.parse(stdin.readLineSync());
         print("Digite o email do cliente: ");
         var email = stdin.readLineSync();
-        var cliente = new Pessoa.construtorFeminino(nome, idade, email);
+        var cliente = new Cliente.feminino(nome, idade, email, true);
         print(cliente.sexo);
         break;
       default:
