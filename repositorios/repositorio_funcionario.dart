@@ -1,5 +1,5 @@
 import 'repositorio.dart';
-import 'funcionario.dart';
+import '../classes/funcionario.dart';
 
 class RepositorioFuncionario implements Repositorio {
   var listaFuncionarios = List<Funcionario>();

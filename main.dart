@@ -1,10 +1,11 @@
 import 'dart:io';
 
-import 'cliente.dart';
-import 'funcionario.dart';
-import 'pessoa.dart';
-import 'repositorio_cliente.dart';
-import 'repositorio_funcionario.dart';
+import 'classes/cliente.dart';
+import 'classes/fornecedor.dart';
+import 'classes/funcionario.dart';
+import 'classes/pessoa.dart';
+import 'repositorios/repositorio_cliente.dart';
+import 'repositorios/repositorio_funcionario.dart';
 
 main() {
   var opcao;
@@ -74,6 +75,9 @@ main() {
         print("Digite o cargo do funcionario: ");
         var cargo = stdin.readLineSync();
         var funcionario = new Funcionario(nome, idade, email, sexo, cargo);
+        var fornecedor = new Fornecedor(nome, idade, sexo, email, cargo);
+        funcionario.abastecer();
+        fornecedor.abastecer();
         repositorio_funcionario.cadastrar(funcionario);
         // funcionario.desativar();
         break;

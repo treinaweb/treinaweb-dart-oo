@@ -1,5 +1,5 @@
 import 'repositorio.dart';
-import 'cliente.dart';
+import '../classes/cliente.dart';
 
 class RepositorioCliente implements Repositorio {
   var listaClientes = List<Cliente>();
