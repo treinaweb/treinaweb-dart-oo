@@ -3,11 +3,13 @@ import 'dart:io';
 import 'cliente.dart';
 import 'funcionario.dart';
 import 'pessoa.dart';
+import 'repositorio_cliente.dart';
+import 'repositorio_funcionario.dart';
 
 main() {
   var opcao;
-  var listaClientes = List<Cliente>();
-  var listaFuncionarios = List<Funcionario>();
+  RepositorioCliente repositorio_cliente = new RepositorioCliente();
+  RepositorioFuncionario repositorio_funcionario = new RepositorioFuncionario();
   do {
     print("MENU: ");
     print("1 - Cadastrar Cliente");
@@ -31,8 +33,7 @@ main() {
         print("Digite o sexo do cliente: ");
         var sexo = stdin.readLineSync();
         var cliente = new Cliente(nome, idade, email, sexo, true);
-        listaClientes.add(cliente);
-        cliente.desativar();
+        repositorio_cliente.cadastrar(cliente);
 
         break;
       case 2:
@@ -43,8 +44,8 @@ main() {
         print("Digite o email do cliente: ");
         var email = stdin.readLineSync();
         var cliente = new Cliente.masculino(nome, idade, email, true);
-        listaClientes.add(cliente);
-        // print(cliente.sexo);
+        repositorio_cliente.cadastrar(cliente);
+
         break;
       case 3:
         print("Digite o nome do cliente: ");
@@ -54,14 +55,12 @@ main() {
         print("Digite o email do cliente: ");
         var email = stdin.readLineSync();
         var cliente = new Cliente.feminino(nome, idade, email, true);
-        listaClientes.add(cliente);
+        repositorio_cliente.cadastrar(cliente);
 
         // print(cliente.sexo);
         break;
       case 4:
-        for (var cliente in listaClientes) {
-          print(cliente);
-        }
+        repositorio_cliente.listar();
         break;
       case 5:
         print("Digite o nome do funcionario: ");
@@ -75,8 +74,8 @@ main() {
         print("Digite o cargo do funcionario: ");
         var cargo = stdin.readLineSync();
         var funcionario = new Funcionario(nome, idade, email, sexo, cargo);
-        listaFuncionarios.add(funcionario);
-        funcionario.desativar();
+        repositorio_funcionario.cadastrar(funcionario);
+        // funcionario.desativar();
         break;
       case 6:
         print("Digite o nome do funcionario: ");
@@ -88,7 +87,7 @@ main() {
         print("Digite o cargo do funcionario: ");
         var cargo = stdin.readLineSync();
         var funcionario = new Funcionario.masculino(nome, idade, email, cargo);
-        listaFuncionarios.add(funcionario);
+        repositorio_funcionario.cadastrar(funcionario);
         // print(cliente.sexo);
         break;
       case 7:
@@ -101,14 +100,12 @@ main() {
         print("Digite o cargo do funcionario: ");
         var cargo = stdin.readLineSync();
         var funcionario = new Funcionario.feminino(nome, idade, email, cargo);
-        listaFuncionarios.add(funcionario);
+        repositorio_funcionario.cadastrar(funcionario);
 
         // print(cliente.sexo);
         break;
       case 8:
-        for (var funcionario in listaFuncionarios) {
-          print(funcionario);
-        }
+        repositorio_funcionario.listar();
         break;
       default:
     }
